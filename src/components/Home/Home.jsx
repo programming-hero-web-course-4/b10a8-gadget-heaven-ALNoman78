@@ -4,7 +4,7 @@ import Product from '../Products/Product'
 
 const Home = () => {
     return (
-        <div className='bg-[#9538E2] px-56 pb-56 text-white'>
+        <div className='bg-[#9538E2] rounded-b-xl px-56 pb-56 text-white'>
             <Banner></Banner>
             <Product></Product>
         </div>
