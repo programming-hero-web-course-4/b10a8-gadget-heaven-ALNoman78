@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types'
+import Banner from '../Banner/Banner'
+import Product from '../Products/Product'
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-[#9538E2] px-56 pb-56 text-white'>
+            <Banner></Banner>
+            <Product></Product>
         </div>
     )
 }

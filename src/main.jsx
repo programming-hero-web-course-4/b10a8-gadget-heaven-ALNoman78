@@ -19,6 +19,10 @@ const router = createBrowserRouter([
       {
         path : '/',
         element :<Home></Home>,
+      },
+      {
+        path : '/statistics',
+        element : <div>moule</div>
       }
     ]
   },
