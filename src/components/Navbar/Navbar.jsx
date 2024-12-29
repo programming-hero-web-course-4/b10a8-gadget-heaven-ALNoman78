@@ -1,9 +1,10 @@
-import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
+import { IoMdCart } from "react-icons/io";
+import { GrFavorite } from "react-icons/gr";
 
 const Navbar = () => {
     const list = <>
-        <li><NavLink to= '/'>Home</NavLink></li>
+        <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/statistics'>Statistics</NavLink></li>
         <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
     </>
@@ -28,7 +29,7 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            {list}
+                        {list}
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">Gadget Heaven</a>
@@ -41,7 +42,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <button className="btn btn-ghost btn-circle text-2xl">
+                    <IoMdCart></IoMdCart>
+                </button>
+                <button className="btn btn-ghost btn-circle text-2xl">
+                    <GrFavorite />
+                </button>
             </div>
         </div>
     )

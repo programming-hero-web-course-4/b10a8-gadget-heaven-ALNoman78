@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import bannerImage from '../../assets/banner.jpg'
 
 const Banner = () => {

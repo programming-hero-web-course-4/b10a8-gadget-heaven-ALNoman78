@@ -9,6 +9,7 @@ import "./index.css";
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Root from './components/Root/Root';
 import Home from './components/Home/Home';
+import Product from './components/Products/Product';
 
 const router = createBrowserRouter([
   {
@@ -22,8 +23,9 @@ const router = createBrowserRouter([
       },
       {
         path : '/statistics',
+        loader : fetch ('/Data.json'),
         element : <div>moule</div>
-      }
+      },
     ]
   },
 ]);
