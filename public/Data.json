@@ -1,7 +1,7 @@
 [
     {
         "product_id": "LAP1001",
-        "product_title": "MacBook Air M3 13-Inch 16GB/256GB 8 Core CPU 8 Core GPU",
+        "product_title": "MacBook Air M3",
         "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/MacBook-Air-M3-13-Inch-SIlver-7440.jpg",
         "category": "Laptop",
         "price": 799.99,
@@ -18,7 +18,7 @@
     },
     {
         "product_id": "LAP1002",
-        "product_title": "MacBook Air M2 13.6-inch 8/256GB",
+        "product_title": "MacBook Air M2",
         "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/MacBook-Air-M2-Midnight-8137.jpg",
         "category": "Laptop",
         "price": 1199.99,
@@ -35,7 +35,7 @@
     },
     {
         "product_id": "LAP1003",
-        "product_title": "Lenovo Yoga 7 2-in-1 14AHP9 Ryzen 7 8840HS AI Integrated 14 Touch Laptop",
+        "product_title": "Lenovo Yoga 7",
         "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/yoga-7-2-in-1-14ahp9/yoga-7-2-in-1-14ahp9-01-500x500.webp",
         "category": "Laptop",
         "price": 949.99,
@@ -138,7 +138,7 @@
     },
     {
         "product_id": "ACC3003",
-        "product_title": "JBL GO 4 Portable Waterproof Speaker",
+        "product_title": "JBL GO 4 Portable",
         "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/JBL-GO-4-Portable-Waterproof-Speaker-Black-orange-2841.jpg",
         "category": "Accessories",
         "price": 49.99,

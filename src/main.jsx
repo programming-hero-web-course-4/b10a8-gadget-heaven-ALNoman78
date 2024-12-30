@@ -9,7 +9,7 @@ import "./index.css";
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Root from './components/Root/Root';
 import Home from './components/Home/Home';
-import Product from './components/Products/Product';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 const router = createBrowserRouter([
   {
@@ -23,9 +23,14 @@ const router = createBrowserRouter([
       },
       {
         path : '/statistics',
-        loader : fetch ('/Data.json'),
+        loader : () => fetch ('/Data.json'),
         element : <div>moule</div>
       },
+      {
+        path : '/product/:product_id',
+        loader : () => fetch ('/Data.json'),
+        element : <ProductDetails></ProductDetails>
+      }
     ]
   },
 ]);

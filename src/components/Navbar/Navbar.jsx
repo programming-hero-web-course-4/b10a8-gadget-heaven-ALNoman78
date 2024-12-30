@@ -1,15 +1,18 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { IoMdCart } from "react-icons/io";
 import { GrFavorite } from "react-icons/gr";
 
 const Navbar = () => {
+    const location = useLocation()
+    const isHomePage = location.pathname === "/";
+
     const list = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/statistics'>Statistics</NavLink></li>
         <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
     </>
     return (
-        <div className="navbar bg-[#9538E2] text-white rounded-t-xl font-medium">
+        <div className={`p-4 navbar font-medium ${isHomePage ? ' bg-[#9538E2] text-white rounded-t-xl' : ''}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
