@@ -22,7 +22,7 @@ const Product = () => {
             .then(data => setItems(data))
     }
     return (
-        <div>
+        <div className='font-sora'>
             <h3 className='text-4xl text-center font-bold md:mt-[26rem] my-9'>Explore Cutting-Edge Gadgets</h3>
             <div className="flex w-full flex-col lg:flex-row  gap-6">
                 <div className="card rounded-box grid md:w-[14%] h-[600px] flex-grow">
