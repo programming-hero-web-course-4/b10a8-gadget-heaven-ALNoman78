@@ -3,7 +3,7 @@ import { Link, useLoaderData, useParams } from 'react-router-dom'
 import DynamicText from '../DynamicText/DynamicText'
 import { IoMdCart } from "react-icons/io";
 import { GrFavorite } from "react-icons/gr";
-import { addToCartList } from '../Utility/addToDB';
+import { addToCartList, setDataWishlist } from '../Utility/addToDB';
 
 const ProductDetails = () => {
     const { product_id } = useParams()
@@ -15,8 +15,12 @@ const ProductDetails = () => {
     const handleAddToCart = (id) => {
         addToCartList(id)
     }
+    // stored data wishlist
+    const handleWishlist = (id) => {
+        setDataWishlist(id)
+    }
 
-    const { product_image, product_title, price, category, description, specification, rating, } = items
+    const { product_image, product_title, price, description, specification } = items
     console.log(product_id, id);
     return (
         <div className='font-sora'>
@@ -55,7 +59,10 @@ const ProductDetails = () => {
                                 <button >Add To Cart</button>
                                 <IoMdCart></IoMdCart>
                             </div>
-                            <button className='btn'> <GrFavorite /></button>
+                            <button 
+                            className='btn'
+                            onClick={() => handleWishlist(product_id)}
+                            > <GrFavorite /></button>
                         </div>
                     </div>
                 </div>

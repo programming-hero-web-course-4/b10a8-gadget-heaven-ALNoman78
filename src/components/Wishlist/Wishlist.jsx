@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 
-const Cart = ({ cartItems }) => {
-    const { product_image, product_title, price,  description } = cartItems
-    // console.log(cartItems);
+const Wishlist = ({ wishlistData }) => {
+    // console.log(wishlistData)
+    const { product_image, product_title, price, description } = wishlistData
     return (
         <div>
             <div className='flex items-center justify-around bg-white border border-base-300 rounded-xl shadow-lg md:max-w-6xl mx-auto m-4'>
@@ -35,8 +35,8 @@ const Cart = ({ cartItems }) => {
     )
 }
 
-Cart.propTypes = {
-    cartItems: PropTypes.object.isRequired,
+Wishlist.propTypes = {
+    wishlistData: PropTypes.object.isRequired,
 }
 
-export default Cart
+export default Wishlist

@@ -3,15 +3,18 @@ import DynamicText from '../DynamicText/DynamicText'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { useLoaderData } from 'react-router-dom';
-import { getStoredData } from '../Utility/addToDB';
+import { getStoredData, getStoredWishlist } from '../Utility/addToDB';
 import Cart from '../Cart/Cart';
 import { FaSort } from "react-icons/fa";
 import groupImage from '../../assets/Group.png'
+import Wishlist from '../Wishlist/Wishlist';
 
 const Dashboard = () => {
     const cartData = useLoaderData();
     const [cart, setCart] = useState([])
-
+    const allWishlist = useLoaderData()
+    const [wishlist , setWishlist] = useState([])
+    // for cart list data
     useEffect(() => {
         const storedCartList = getStoredData()
         const storedListInt = storedCartList.map((id) => parseInt(id))
@@ -19,7 +22,14 @@ const Dashboard = () => {
         const allCartList = cartData.filter((items) => storedListInt.includes(items.product_id))
         setCart(allCartList)
     }, [])
+    // for wishlist data
+    useEffect(() => {
+        const storedWishlist = getStoredWishlist()
+        const storedListInt = storedWishlist.map((id) => parseInt(id))
 
+        const allWishlistData = allWishlist.filter((item) => storedListInt.includes(item.product_id))
+        setWishlist(allWishlistData)
+    }, [])
     const totalPrice = cart.reduce((sum, item) => sum + item.price, 0)
 
     return (
@@ -36,7 +46,7 @@ const Dashboard = () => {
                     </TabList>
 
                     <TabPanel>
-                        <div className='flex items-center justify-between md:max-w-7xl mx-auto'>
+                        <div className='flex justify-between md:max-w-7xl mx-auto'>
                             <h2 className='text-xl font-bold'>Cart</h2>
                             {/* total amount , short ,  */}
                             <div className='flex items-center justify-between gap-5'>
@@ -90,11 +100,18 @@ const Dashboard = () => {
                         </div>
                     </TabPanel>
                     <TabPanel>
-                        <h2>Any content 2</h2>
+                        <div className='md:max-w-7xl mx-auto'>
+                            <h2 className='text-xl font-bold'>Wishlist : {wishlist.length}</h2>
+                            <div>
+                            {
+                                wishlist.map((item , idx) => <Wishlist key={idx} wishlistData={item}></Wishlist>)
+                            }
+                            </div>
+                        </div>
                     </TabPanel>
                 </Tabs>
             </div>
-        </div>
+        </div >
     )
 }
 
