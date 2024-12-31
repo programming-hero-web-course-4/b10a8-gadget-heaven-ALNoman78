@@ -44,12 +44,15 @@ const ProductDetails = () => {
                         <div className='flex items-center gap-2'>
                             <p className='text-[#09080F] font-bold text-lg my-4'>Ratings : </p>
                             <div className="rating">
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             </div>
                         </div>
                         <div className='flex items-center justify-start gap-5'>
-                            <div className='flex items-center gap-3 btn w-40 text-white bg-[#9538E2] font-bold'>
-                                <button onClick={() => handleAddToCart(product_id)}>Add To Cart</button>
+                            <div
+                                className='flex items-center gap-3 btn w-40 text-white bg-[#9538E2] font-bold'
+                                onClick={() => handleAddToCart(product_id)}
+                            >
+                                <button >Add To Cart</button>
                                 <IoMdCart></IoMdCart>
                             </div>
                             <button className='btn'> <GrFavorite /></button>
