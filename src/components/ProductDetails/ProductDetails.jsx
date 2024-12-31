@@ -29,8 +29,8 @@ const ProductDetails = () => {
                 paraText={'Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'}
                 btn={null}
             ></DynamicText>
-            <div className='absolute w-[1154px] right-[23rem] rounded-[2.75rem] mx-auto -bottom-[5rem] mt-12'>
-                <div className='flex bg-white p-8 rounded-xl gap-7'>
+            <div className='md:absolute md:w-[1154px] md:right-[23rem] md:rounded-[2.75rem] mx-auto md:-bottom-[5rem] md:mt-12'>
+                <div className='md:flex bg-white p-8 rounded-xl gap-7'>
                     <div>
                         <img
                             className='md:h-[500px] object-cover rounded-xl border border-base-200'

@@ -5,12 +5,12 @@ import 'react-tabs/style/react-tabs.css';
 
 const DynamicText = ({ headingText, paraText, btn }) => {
     const location = useLocation()
-    const isHomePage = location.pathname === "/dashboard";
+    // const isHomePage = location.pathname === "/dashboard";
     return (
-        <div className="font-sora hero bg-[#9538E2] rounded-b-xl px-56 pb-64 text-white">
+        <div className="font-sora hero bg-[#9538E2] rounded-b-xl md:px-56 md:pb-64 text-white">
             <div className="hero-content text-center">
                 <div className="">
-                    <h1 className="text-7xl my-3 font-bold">{headingText}</h1>
+                    <h1 className="md:text-7xl text-2xl my-3 font-bold">{headingText}</h1>
                     <p className="py-3 md:w-2/3 mx-auto text-center">
                         {paraText}
                     </p>

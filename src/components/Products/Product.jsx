@@ -23,10 +23,10 @@ const Product = () => {
     }
     return (
         <div className='font-sora'>
-            <h3 className='text-4xl text-center font-bold md:mt-[26rem] my-9'>Explore Cutting-Edge Gadgets</h3>
-            <div className="flex w-full flex-col lg:flex-row  gap-6">
-                <div className="card rounded-box grid md:w-[14%] h-[600px] flex-grow">
-                    <ul className='w-full font-medium bg-white shadow-md p-5 rounded-xl border'>
+            <h3 className='md:text-4xl text-2xl text-center font-bold md:mt-[26rem] my-9'>Explore Cutting-Edge Gadgets</h3>
+            <div className="flex w-full flex-col lg:flex-row md:gap-6">
+                <div className="card rounded-box grid md:w-[14%] md:h-[600px] flex-grow">
+                    <ul className='w-full font-medium bg-white shadow-md md:p-5 rounded-xl border'>
                         <li className='p-3  bg-[#9538E2]  rounded-xl text-white m-2 '>All Products</li>
                         {
                             categories.map((category) => (
@@ -43,7 +43,7 @@ const Product = () => {
                 </div>
                 <div className="card rounded-box grid md:w-[70%] flex-grow">
                     <h3>content : {items.length}</h3>
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                    <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {
                             items.map((category, idx) => <SingleProduct key={idx} item={category}></SingleProduct>)
                         }

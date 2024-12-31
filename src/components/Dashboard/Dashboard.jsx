@@ -46,11 +46,11 @@ const Dashboard = () => {
                     </TabList>
 
                     <TabPanel>
-                        <div className='flex justify-between md:max-w-7xl mx-auto'>
-                            <h2 className='text-xl font-bold'>Cart</h2>
+                        <div className='md:flex justify-between md:max-w-7xl mx-auto'>
+                            <h2 className='md:text-xl text-sm font-bold'>Cart</h2>
                             {/* total amount , short ,  */}
-                            <div className='flex items-center justify-between gap-5'>
-                                <p className='text-xl font-bold'>Total Amount : $
+                            <div className='flex flex-wrap items-center justify-between md:gap-5'>
+                                <p className='md:text-xl text-sm font-bold'>Total Amount : $
                                     {
                                         totalPrice
                                     }
@@ -59,21 +59,21 @@ const Dashboard = () => {
                                     <div
                                         tabIndex={0}
                                         role="button"
-                                        className="btn m-1 rounded-full border border-[#8332C5] font-medium bg-white">
+                                        className="btn m-1 md:text-xl text-xs rounded-full border border-[#8332C5] font-medium bg-white">
                                         Sort by Price
                                         <FaSort></FaSort>
                                     </div>
                                 </div>
                                 {/* Open the modal using document.getElementById('ID').showModal() method */}
                                 <button
-                                    className='btn bg-[#8332C5] text-white rounded-full'
+                                    className='btn bg-[#8332C5] text-white rounded-full md:text-xl text-sm'
                                     onClick={() => document.getElementById('my_modal_5').showModal()}>Purchase</button>
                                 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle flex-col items-center justify-center text-center">
                                     <div className="modal-box text-center">
                                         <div className='flex justify-center'>
                                             <img src={groupImage} alt="" />
                                         </div>
-                                        <p className="py-4 font-bold text-lg">Payment Successfully</p>
+                                        <p className="py-4 font-bold md:text-lg">Payment Successfully</p>
                                         <p>Thanks for purchasing.</p>
                                         <br />
                                         <span>
