@@ -1,15 +1,19 @@
 import PropTypes from 'prop-types'
+import { useLocation } from 'react-router-dom'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const DynamicText = ({ headingText, paraText, btn }) => {
+    const location = useLocation()
+    const isHomePage = location.pathname === "/dashboard";
     return (
         <div className="font-sora hero bg-[#9538E2] rounded-b-xl px-56 pb-64 text-white">
             <div className="hero-content text-center">
                 <div className="">
                     <h1 className="text-7xl my-3 font-bold">{headingText}</h1>
-                    <p className="py-3 md:w-2/4 mx-auto text-center">
+                    <p className="py-3 md:w-2/3 mx-auto text-center">
                         {paraText}
                     </p>
-
                     {
                         btn && (<button className="btn bg-white text-purple-600 font-bold px-12 rounded-full">{btn}</button>)
                     }

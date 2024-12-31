@@ -11,6 +11,7 @@ import Root from './components/Root/Root';
 import Home from './components/Home/Home';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import { ToastContainer } from 'react-toastify';
+import Dashboard from './components/Dashboard/Dashboard';
 
 
 const router = createBrowserRouter([
@@ -26,12 +27,17 @@ const router = createBrowserRouter([
       {
         path: '/statistics',
         loader: () => fetch('/Data.json'),
-        element: <div>moule</div>
+        element: <div>moule</div>,
       },
       {
         path: '/product/:product_id',
         loader: () => fetch('/Data.json'),
         element: <ProductDetails></ProductDetails>
+      },
+      {
+        path : '/dashboard',
+        loader : () => fetch('/Data.json'),
+        element : <Dashboard></Dashboard>
       }
     ]
   },
