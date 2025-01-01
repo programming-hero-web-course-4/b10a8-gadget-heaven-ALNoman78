@@ -47,7 +47,10 @@ const Product = () => {
                                 <li
                                     key={category}
                                     onClick={() => fetchedData(category)}
-                                    className={`p-3 bg-base-200 text-[rgba(9,8,15,0.6)] rounded-xl m-2 cursor-pointer ${selectedCategory === category ? 'bg-[#9538E2] text-[#9538E2]' : ''
+                                    className={`p-3 bg-base-200 text-[rgba(9,8,15,0.6)] rounded-xl  m-2 cursor-pointer 
+                                        ${selectedCategory === category ? 
+                                            'p-3 rounded-xl text-white m-2 cursor-pointer bg-[#9538e29f] ' 
+                                            : 'bg-gray-200 text-black'
                                         }`}
                                 >
                                     {category}

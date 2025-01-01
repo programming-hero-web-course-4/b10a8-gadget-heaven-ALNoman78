@@ -39,10 +39,10 @@ const Dashboard = () => {
                 paraText={'Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'}
             ></DynamicText>
             <div>
-                <Tabs className='border-b-0'>
-                    <TabList>
-                        <Tab>Cart</Tab>
-                        <Tab>Wishlist</Tab>
+                <Tabs className='border-0'>
+                    <TabList className='md:absolute md:top-[15%] md:left-[43%] flex font-sora gap-6 font-bold'>
+                        <Tab className='px-8 py-3 rounded-full border border-white cursor-pointer'>Cart</Tab>
+                        <Tab className='px-8 py-3 rounded-full border border-white cursor-pointer'>Wishlist</Tab>
                     </TabList>
 
                     <TabPanel>
