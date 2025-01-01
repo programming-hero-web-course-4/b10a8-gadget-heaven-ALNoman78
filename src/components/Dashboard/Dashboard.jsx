@@ -52,7 +52,7 @@ const Dashboard = () => {
                             <div className='flex flex-wrap items-center justify-between md:gap-5'>
                                 <p className='md:text-xl text-sm font-bold'>Total Amount : $
                                     {
-                                        totalPrice
+                                        Math.round(totalPrice)
                                     }
                                 </p>
                                 <div className="dropdown">
@@ -79,7 +79,7 @@ const Dashboard = () => {
                                         <span>
                                             Total Price : $
                                             {
-                                                totalPrice
+                                                Math.round(totalPrice)
                                             }
                                         </span>
                                         <div className="modal-action">
