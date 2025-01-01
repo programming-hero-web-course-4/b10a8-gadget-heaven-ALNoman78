@@ -13,7 +13,9 @@ const Dashboard = () => {
     const cartData = useLoaderData();
     const [cart, setCart] = useState([])
     const allWishlist = useLoaderData()
-    const [wishlist , setWishlist] = useState([])
+    const [wishlist, setWishlist] = useState([])
+    // sort by ascending order to descending order
+    const [sort, setSort] = useState('')
     // for cart list data
     useEffect(() => {
         const storedCartList = getStoredData()
@@ -30,6 +32,14 @@ const Dashboard = () => {
         const allWishlistData = allWishlist.filter((item) => storedListInt.includes(item.product_id))
         setWishlist(allWishlistData)
     }, [])
+    // handle sort data
+    const handleSort = (sortType) => {
+        setSort(sortType)
+        if (sortType === 'Sort by Price') {
+            const sortPrice = [...cart].sort((a, b) => b.price - a.price)
+            setCart(sortPrice)
+        }
+    }
     const totalPrice = cart.reduce((sum, item) => sum + item.price, 0)
 
     return (
@@ -40,16 +50,16 @@ const Dashboard = () => {
             ></DynamicText>
             <div>
                 <Tabs className='border-0'>
-                    <TabList className='md:absolute md:top-[15%] md:left-[43%] flex font-sora gap-6 font-bold'>
+                    <TabList className='md:absolute md:top-[15%] md:left-[43%] flex font-sora mt-4  gap-6 font-bold'>
                         <Tab className='px-8 py-3 rounded-full border border-white cursor-pointer'>Cart</Tab>
                         <Tab className='px-8 py-3 rounded-full border border-white cursor-pointer'>Wishlist</Tab>
                     </TabList>
 
                     <TabPanel>
-                        <div className='md:flex justify-between md:max-w-7xl mx-auto'>
+                        <div className='md:flex justify-between md:max-w-7xl mx-auto md:my-8 my-4'>
                             <h2 className='md:text-xl text-sm font-bold'>Cart</h2>
                             {/* total amount , short ,  */}
-                            <div className='flex flex-wrap items-center justify-between md:gap-5'>
+                            <div className='md:flex items-center justify-between md:gap-5'>
                                 <p className='md:text-xl text-sm font-bold'>Total Amount : $
                                     {
                                         Math.round(totalPrice)
@@ -59,6 +69,7 @@ const Dashboard = () => {
                                     <div
                                         tabIndex={0}
                                         role="button"
+                                        onClick={() => handleSort('Sort by Price')}
                                         className="btn m-1 md:text-xl text-xs rounded-full border border-[#8332C5] font-medium bg-white">
                                         Sort by Price
                                         <FaSort></FaSort>
@@ -100,12 +111,12 @@ const Dashboard = () => {
                         </div>
                     </TabPanel>
                     <TabPanel>
-                        <div className='md:max-w-7xl mx-auto'>
+                        <div className='md:max-w-7xl mx-auto md:my-8 my-4'>
                             <h2 className='text-xl font-bold'>Wishlist : {wishlist.length}</h2>
                             <div>
-                            {
-                                wishlist.map((item , idx) => <Wishlist key={idx} wishlistData={item}></Wishlist>)
-                            }
+                                {
+                                    wishlist.map((item, idx) => <Wishlist key={idx} wishlistData={item}></Wishlist>)
+                                }
                             </div>
                         </div>
                     </TabPanel>

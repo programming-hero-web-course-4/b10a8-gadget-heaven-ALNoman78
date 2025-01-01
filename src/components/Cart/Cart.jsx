@@ -5,7 +5,7 @@ const Cart = ({ cartItems }) => {
     // console.log(cartItems);
     return (
         <div>
-            <div className='md:flex items-center justify-around bg-white border border-base-300 rounded-xl shadow-lg md:max-w-6xl md:mx-auto my-2 md:m-4'>
+            <div className='md:flex items-center justify-around my-6 bg-white border border-base-300 rounded-xl shadow-lg md:max-w-6xl md:mx-auto  md:m-4'>
                 <div>
                     <img
                         className='md:h-[220px] h-1/2 object-cover md:m-4 bg-base-200 rounded-lg border border-base-200'
