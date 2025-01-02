@@ -25,7 +25,7 @@ const Banner = () => {
                 btn={'Shop Now'}
             >
             </DynamicText>
-            <div className='md:absolute md:w-[1154px]  bg-[rgba(255,255,255,0.34)] right-[23rem] rounded-[2.75rem] md:mx-auto -bottom-[7rem] md:mt-12 mt-4'>
+            <div className='md:absolute md:w-[1154px]  bg-[rgba(255,255,255,0.34)] right-[23rem] rounded-[2.75rem] md:mx-auto -bottom-[6rem] md:mt-12 mt-4'>
                 <img className='w-full md:h-[600px] object-cover p-6 border-2 border-white rounded-[2.75rem]' src={bannerImage} alt="" />
             </div>
         </div>

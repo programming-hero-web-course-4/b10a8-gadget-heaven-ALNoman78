@@ -12,6 +12,8 @@ import Home from './components/Home/Home';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import { ToastContainer } from 'react-toastify';
 import Dashboard from './components/Dashboard/Dashboard';
+import PreOrder from './components/PreOrder/PreOrder';
+import Submit from './components/Submit/Submit';
 
 
 const router = createBrowserRouter([
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: '/statistics',
         loader: () => fetch('/Data.json'),
-        element: <div>moule</div>,
+        // element: <div>moule</div>,
       },
       {
         path: '/product/:product_id',
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
         path : '/dashboard',
         loader : () => fetch('/Data.json'),
         element : <Dashboard></Dashboard>
+      },
+      {
+        path : '/order',
+        element : <PreOrder></PreOrder>
+      },
+      {
+        path : '/submit',
+        element : <Submit></Submit>,
       }
     ]
   },

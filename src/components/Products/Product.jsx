@@ -29,7 +29,7 @@ const Product = () => {
     }
     return (
         <div className='font-sora'>
-            <h3 className='md:text-4xl text-2xl text-center font-bold md:mt-[26rem] my-9'>Explore Cutting-Edge Gadgets</h3>
+            <h3 className='md:text-4xl text-2xl text-center font-bold md:pt-[26rem]'>Explore Cutting-Edge Gadgets</h3>
             <div className="flex w-full flex-col lg:flex-row md:gap-6">
                 <div className="card rounded-box grid md:w-[14%] md:h-[600px] flex-grow">
                     <div className="p-4">

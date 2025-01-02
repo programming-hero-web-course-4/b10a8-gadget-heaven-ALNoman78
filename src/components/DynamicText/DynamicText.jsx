@@ -9,7 +9,7 @@ const DynamicText = ({ headingText, paraText, btn }) => {
     console.log(location);
     // const isHomePage = location.pathname === "/dashboard";
     return (
-        <div className="font-sora hero bg-[#9538E2] rounded-b-xl md:px-56 md:pb-64 text-white">
+        <div className="font-sora hero bg-[#9538E2] rounded-b-xl md:px-56 md:pb-64 md:w-[96%] mx-auto text-white">
             <div className="hero-content text-center">
                 <div className="">
                     <h1 className="md:text-7xl text-2xl my-3 font-bold">{headingText}</h1>

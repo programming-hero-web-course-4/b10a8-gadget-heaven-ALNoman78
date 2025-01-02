@@ -10,9 +10,10 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/statistics'>Statistics</NavLink></li>
         <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+        <li><NavLink to='/order'>Pre-Order</NavLink></li>
     </>
     return (
-        <div className={`p-4 navbar font-medium ${isHomePage ? ' bg-[#9538E2] text-white rounded-t-xl' : ''}`}>
+        <div className={`p-4 navbar font-medium ${isHomePage ? ' bg-[#9538E2] text-white rounded-t-xl md:w-[96%] mx-auto ' : ''}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
