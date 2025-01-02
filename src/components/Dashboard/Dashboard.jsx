@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import DynamicText from '../DynamicText/DynamicText'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -49,11 +49,13 @@ const Dashboard = () => {
                 paraText={'Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'}
             ></DynamicText>
             <div>
-                <Tabs className='border-0'>
-                    <TabList className='md:absolute md:top-[15%] md:left-[43%] flex font-sora mt-4  gap-6 font-bold'>
-                        <Tab className='px-8 py-3 rounded-full border border-white cursor-pointer'>Cart</Tab>
-                        <Tab className='px-8 py-3 rounded-full border border-white cursor-pointer'>Wishlist</Tab>
-                    </TabList>
+                <Tabs className='relative'>
+                    <div className='font-sora mt-4  gap-6 font-bold flex items-center justify-center relative'>
+                        <TabList className='flex items-center'>
+                            <Tab className='px-8 py-3 rounded-full border border-white cursor-pointer'>Cart</Tab>
+                            <Tab className='px-8 py-3 rounded-full border border-white cursor-pointer'>Wishlist</Tab>
+                        </TabList>
+                    </div>
 
                     <TabPanel>
                         <div className='md:flex justify-between md:max-w-7xl mx-auto md:my-8 my-4'>

@@ -1,6 +1,4 @@
-import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
-import { useLoaderData } from 'react-router-dom'
 import SingleProduct from '../SingleProduct/SingleProduct';
 
 const Product = () => {

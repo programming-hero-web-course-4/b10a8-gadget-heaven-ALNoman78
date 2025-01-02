@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types'
-import { Link, useLoaderData, useParams } from 'react-router-dom'
+import { useLoaderData, useParams } from 'react-router-dom'
 import DynamicText from '../DynamicText/DynamicText'
 import { IoMdCart } from "react-icons/io";
 import { GrFavorite } from "react-icons/gr";

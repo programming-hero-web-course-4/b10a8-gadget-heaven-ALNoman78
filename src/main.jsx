@@ -4,7 +4,6 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
-  useLocation,
 } from "react-router-dom";
 import "./index.css";
 import ErrorPage from './components/ErrorPage/ErrorPage';

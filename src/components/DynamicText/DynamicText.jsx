@@ -1,10 +1,12 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const DynamicText = ({ headingText, paraText, btn }) => {
     const location = useLocation()
+    console.log(location);
     // const isHomePage = location.pathname === "/dashboard";
     return (
         <div className="font-sora hero bg-[#9538E2] rounded-b-xl md:px-56 md:pb-64 text-white">
@@ -26,6 +28,10 @@ const DynamicText = ({ headingText, paraText, btn }) => {
     )
 }
 
-DynamicText.propTypes = {}
+DynamicText.propTypes = {
+    headingText: PropTypes.string,
+    paraText : PropTypes.string,
+    btn : PropTypes.string,
+}
 
 export default DynamicText
