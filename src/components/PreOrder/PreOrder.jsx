@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { Link } from 'react-router-dom';
 import DynamicText from '../DynamicText/DynamicText';
+import { Helmet } from 'react-helmet-async';
 
 const PreOrder = () => {
     const [email, setEmail] = useState('');
@@ -17,11 +18,15 @@ const PreOrder = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        console.log(email);
     };
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    Pre-Order - Gadget Haven
+                </title>
+            </Helmet>
             <DynamicText
                 headingText={'Looking For Something Different ??'}
                 paraText={'Put Your Information in The Box...'}

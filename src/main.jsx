@@ -14,6 +14,7 @@ import { ToastContainer } from 'react-toastify';
 import Dashboard from './components/Dashboard/Dashboard';
 import PreOrder from './components/PreOrder/PreOrder';
 import Submit from './components/Submit/Submit';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 const router = createBrowserRouter([
@@ -37,17 +38,17 @@ const router = createBrowserRouter([
         element: <ProductDetails></ProductDetails>
       },
       {
-        path : '/dashboard',
-        loader : () => fetch('/Data.json'),
-        element : <Dashboard></Dashboard>
+        path: '/dashboard',
+        loader: () => fetch('/Data.json'),
+        element: <Dashboard></Dashboard>
       },
       {
-        path : '/order',
-        element : <PreOrder></PreOrder>
+        path: '/order',
+        element: <PreOrder></PreOrder>
       },
       {
-        path : '/submit',
-        element : <Submit></Submit>,
+        path: '/submit',
+        element: <Submit></Submit>,
       }
     ]
   },
@@ -55,7 +56,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-    <ToastContainer></ToastContainer>
+    <HelmetProvider>
+      <RouterProvider router={router}></RouterProvider>
+      <ToastContainer></ToastContainer>
+    </HelmetProvider>
   </StrictMode>,
 )

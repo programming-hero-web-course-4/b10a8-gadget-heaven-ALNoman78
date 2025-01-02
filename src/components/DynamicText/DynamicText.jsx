@@ -6,7 +6,7 @@ import 'react-tabs/style/react-tabs.css';
 
 const DynamicText = ({ headingText, paraText, btn }) => {
     const location = useLocation()
-    console.log(location);
+    // console.log(location);
     // const isHomePage = location.pathname === "/dashboard";
     return (
         <div className="font-sora hero bg-[#9538E2] rounded-b-xl md:px-56 md:pb-64 md:w-[96%] mx-auto text-white">

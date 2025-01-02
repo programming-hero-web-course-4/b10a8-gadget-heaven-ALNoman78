@@ -8,6 +8,7 @@ import Cart from '../Cart/Cart';
 import { FaSort } from "react-icons/fa";
 import groupImage from '../../assets/Group.png'
 import Wishlist from '../Wishlist/Wishlist';
+import { Helmet } from 'react-helmet-async';
 
 const Dashboard = () => {
     const cartData = useLoaderData();
@@ -44,6 +45,11 @@ const Dashboard = () => {
 
     return (
         <div className='font-sora relative'>
+            <Helmet>
+                <title>
+                    Dashboard - Gadget Haven
+                </title>
+            </Helmet>
             <DynamicText
                 headingText={'Dashboard'}
                 paraText={'Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'}

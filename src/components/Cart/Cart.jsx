@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 
 const Cart = ({ cartItems }) => {
     const { product_image, product_title, price, description } = cartItems
-    // console.log(cartItems);
     return (
         <div>
             <div className='md:flex items-center justify-around my-6 bg-white border border-base-300 rounded-xl shadow-lg md:max-w-6xl md:mx-auto  md:m-4'>

@@ -1,9 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 const SingleProduct = ({ item }) => {
-    const { product_image, product_id, product_title, price, category } = item
+    const { product_image, product_id, product_title, price} = item
     return (
         <div className="card card-compact bg-white md:m-5 shadow-md border border-base-200">
             <figure className='rounded-xl'>
