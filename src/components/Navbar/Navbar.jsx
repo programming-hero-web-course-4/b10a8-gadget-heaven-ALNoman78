@@ -1,10 +1,51 @@
 import { NavLink, useLocation } from 'react-router-dom'
 import { IoMdCart } from "react-icons/io";
 import { GrFavorite } from "react-icons/gr";
+import { useState } from 'react';
+import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
+import auth from '../../firebase/firebase.init';
 
 const Navbar = () => {
     const location = useLocation()
     const isHomePage = location.pathname === "/";
+    const [user, setUser] = useState(null)
+    const [isError, setError] = useState()
+
+    const googleProvider = new GoogleAuthProvider()
+    const githubProvider = new GithubAuthProvider()
+
+    const handleLogin = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                console.log(result.user)
+                setUser(result.user)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }
+
+    const handleGithubSignUp = () => {
+        signInWithPopup(auth , githubProvider)
+        .then(res => {
+            console.log(res.user);
+            setUser(res.user)
+        })
+        .catch(error => {
+            console.log(error)
+            setError(error)
+        })
+    }
+
+    const handleSignOut = () => {
+        signOut(auth, googleProvider)
+            .then(result => {
+                console.log(result)
+                setUser(null)
+            })
+            .catch(error => console.log(error))
+    }
+
 
     const list = <>
         <li><NavLink to='/'>Home</NavLink></li>
@@ -52,6 +93,29 @@ const Navbar = () => {
                 <button className="btn btn-ghost btn-circle text-2xl">
                     <GrFavorite />
                 </button>
+                {
+                    user && <div className='flex items-center justify-center gap-4'>
+                        <img className="rounded-full w-14 h-14" src={user.photoURL} alt="_image Not found" />
+                        <div>
+                            <h3>{user.displayName}</h3>
+                            <p>{user?.email}</p>
+                        </div>
+                    </div>
+                }
+                {
+                    user ?
+                        <button className='btn btn-success text-white ml-4' onClick={handleSignOut}  >Sign Out</button> :
+                        <div className='flex items-center gap-4'>
+                            <div onClick={handleLogin}>
+                                <img className='h-8 w-8 rounded-full' src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515358_10512.png" alt="" />
+                            </div>
+                            <div onClick={handleGithubSignUp} className='bg-white h-8 w-8 rounded-full'>
+                                <img className='h-8 w-8 rounded-full' src="https://cdn-icons-png.flaticon.com/256/25/25231.png" alt="" />
+                            </div>
+                        </div>
+                }
+
+
             </div>
         </div>
     )
