@@ -115,7 +115,9 @@ const Navbar = () => {
                         </div>
                 }
 
-
+                {
+                    isError && <p className='text-center font-bold text-red-600'>Error : {isError}</p>
+                }
             </div>
         </div>
     )
