@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: '/statistics',
         loader: () => fetch('/Data.json'),
-        // element: <div>moule</div>,
+        // element: <div>moule</div>,j
       },
       {
         path: '/product/:product_id',
