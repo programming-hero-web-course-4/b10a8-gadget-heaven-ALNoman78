@@ -1,11 +1,11 @@
 // import PropTypes from 'prop-types'
 import PropTypes from 'prop-types';
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 // import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const DynamicText = ({ headingText, paraText, btn }) => {
-    const location = useLocation()
+    // const location = useLocation()
     // console.log(location);
     // const isHomePage = location.pathname === "/dashboard";
     return (
